@@ -23,18 +23,37 @@ npm install
 ```
 This downloads all required packages (may take 1-2 minutes on first run).
 
-### 2. Start the Server
+### 2. Start Frontend & Backend (Easy Way)
 ```bash
-npm start
+npm run start:full
 ```
+This starts **both** in one command:
+- **Frontend** (Angular): `http://localhost:4200/`
+- **Backend** (JSON Server): `http://localhost:3000/`
+
 You should see:
 ```
 ✔ Compiled successfully
-Local: http://localhost:4200/
 ```
 
 ### 3. Open in Browser
 Click or paste: `http://localhost:4200/`
+
+---
+
+## Alternative: Start Separately
+
+**Terminal 1 - Frontend only:**
+```bash
+npm start
+```
+Runs at `http://localhost:4200/`
+
+**Terminal 2 - Backend only:**
+```bash
+npm run backend
+```
+Runs at `http://localhost:3000/`
 
 ---
 
@@ -86,7 +105,9 @@ After the app loads, check that:
 
 | Command | Purpose |
 |---------|---------|
-| `npm start` | Start development server |
+| `npm run start:full` | Start **frontend + backend** together (easiest) |
+| `npm start` | Start frontend only (Angular dev server) |
+| `npm run backend` | Start backend only (JSON Server mock API) |
 | `npm run build` | Build for production |
 | `npm test` | Run unit tests |
 
